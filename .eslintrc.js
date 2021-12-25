@@ -9,6 +9,7 @@ module.exports = {
     requireConfigFile: false
   },
   extends: [
+    'google',
     '@nuxtjs',
     'plugin:nuxt/recommended'
   ],
