@@ -10,6 +10,11 @@
       "StackName": "amplify-metaxwayne-dev-200107",
       "StackId": "arn:aws:cloudformation:us-west-2:249238915669:stack/amplify-metaxwayne-dev-200107/30e70c00-64b1-11ec-a305-0af4af519285",
       "AmplifyAppId": "d3vog3fxgpzitc"
+    },
+    "categories": {
+      "auth": {
+        "metaxwaynee32089ed": {}
+      }
     }
   }
 }
