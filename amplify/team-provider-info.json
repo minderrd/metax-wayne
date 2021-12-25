@@ -9,11 +9,19 @@
       "UnauthRoleName": "amplify-metaxwayne-dev-200107-unauthRole",
       "StackName": "amplify-metaxwayne-dev-200107",
       "StackId": "arn:aws:cloudformation:us-west-2:249238915669:stack/amplify-metaxwayne-dev-200107/30e70c00-64b1-11ec-a305-0af4af519285",
-      "AmplifyAppId": "d3vog3fxgpzitc"
+      "AmplifyAppId": "d3vog3fxgpzitc",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-metaxwayne-dev-200107-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
         "metaxwaynee32089ed": {}
+      },
+      "function": {
+        "metaxwaynee32089edCustomMessage": {
+          "deploymentBucketName": "amplify-metaxwayne-dev-200107-deployment",
+          "s3Key": "amplify-builds/metaxwaynee32089edCustomMessage-7971764b52794171656a-build.zip",
+          "baseUrl": "http://localhost:3000"
+        }
       }
     }
   }

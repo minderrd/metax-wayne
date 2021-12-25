@@ -36,17 +36,11 @@
     "sharedId": "e32089ed",
     "resourceName": "metaxwaynee32089ed",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "defaultSocial",
-    "hostedUI": true,
+    "useDefault": "manual",
+    "hostedUI": false,
     "usernameAttributes": [
       "email"
     ],
-    "hostedUIDomainName": "metaxwaynee32089ed-e32089ed",
-    "authProvidersUserPool": [
-      "Facebook",
-      "Google"
-    ],
-    "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
@@ -64,7 +58,30 @@
       ]
     },
     "breakCircularDependency": true,
-    "dependsOn": [],
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/auth/login/\"],\"LogoutURLs\":[\"http://localhost:3000/auth/signout/\"]}"
+    "dependsOn": [
+      {
+        "category": "function",
+        "resourceName": "metaxwaynee32089edCustomMessage",
+        "triggerProvider": "Cognito",
+        "attributes": [
+          "Arn",
+          "Name"
+        ]
+      }
+    ],
+    "thirdPartyAuth": false,
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": {
+      "CustomMessage": [
+        "custom"
+      ]
+    },
+    "authProviders": [],
+    "parentStack": {
+      "Ref": "AWS::StackId"
+    },
+    "permissions": [],
+    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"CustomMessage\",\n    \"lambdaFunctionName\": \"metaxwaynee32089edCustomMessage\"\n  }\n]"
   }
 }
