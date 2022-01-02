@@ -1,6 +1,30 @@
 import Vue from 'vue'
 import AwsAmplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
+import awsConfig from '../src/aws-exports'
+
+// check is localhost
+const isLocalhost = Boolean(
+    window.location.hostname === 'localhost' ||
+  // [::1] is the IPv6 localhost address.
+  window.location.hostname === '[::1]' ||
+  // 127.0.0.1/8 is considered localhost for IPv4.
+  window.location.hostname.match(
+      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/,
+  ),
+)
+
+// Assuming you have two redirect URIs, and the first is for
+// localhost and second is for production
+const [
+  localRedirectSignIn,
+  productionRedirectSignIn,
+] = awsConfig.oauth.redirectSignIn.split(',')
+
+const [
+  localRedirectSignOut,
+  productionRedirectSignOut,
+] = awsConfig.oauth.redirectSignOut.split(',')
 
 AwsAmplify.configure({
   // (required) - Region where Amazon Cognito project was created
@@ -15,6 +39,18 @@ AwsAmplify.configure({
   // (optional) - Users are not allowed to get the aws credentials
   // unless they are signed in
   // aws_mandatory_sign_in: 'enable'
+
+  oauth: {
+    ...awsConfig.oauth,
+
+    redirectSignIn: isLocalhost ?
+    localRedirectSignIn :
+    productionRedirectSignIn,
+
+    redirectSignOut: isLocalhost ?
+    localRedirectSignOut :
+    productionRedirectSignOut,
+  },
 })
 
 Vue.use(AmplifyPlugin, AmplifyModules)
