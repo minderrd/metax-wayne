@@ -7,17 +7,12 @@
   "functionName": "metaxwaynee32089edCustomMessage",
   "resourceName": "metaxwaynee32089edCustomMessage",
   "parentStack": "auth",
-  "triggerEnvs": [],
+  "triggerEnvs": "[]",
   "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
   "triggerTemplate": "CustomMessage.json.ejs",
   "triggerEventPath": "CustomMessage.event.json",
   "roleName": "metaxwaynee32089edCustomMessage",
   "skipEdit": true,
   "enableCors": false,
-  "environmentVariableList": [
-    {
-      "cloudFormationParameterName": "baseUrl",
-      "environmentVariableName": "BASE_URL"
-    }
-  ]
+  "environmentVariableList": []
 }

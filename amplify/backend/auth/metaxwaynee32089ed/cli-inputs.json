@@ -36,8 +36,8 @@
     "sharedId": "e32089ed",
     "resourceName": "metaxwaynee32089ed",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "manual",
-    "hostedUI": false,
+    "useDefault": "defaultSocial",
+    "hostedUI": true,
     "usernameAttributes": [
       "email"
     ],
@@ -69,7 +69,6 @@
         ]
       }
     ],
-    "thirdPartyAuth": false,
     "userPoolGroups": false,
     "adminQueries": false,
     "triggers": {
@@ -77,11 +76,18 @@
         "custom"
       ]
     },
-    "authProviders": [],
     "parentStack": {
       "Ref": "AWS::StackId"
     },
     "permissions": [],
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"CustomMessage\",\n    \"lambdaFunctionName\": \"metaxwaynee32089edCustomMessage\"\n  }\n]"
+    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"CustomMessage\",\n    \"lambdaFunctionName\": \"metaxwaynee32089edCustomMessage\"\n  }\n]",
+    "hostedUIDomainName": "metaxwaynead9b86d0-ad9b86d0",
+    "authProvidersUserPool": [
+      "Facebook",
+      "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+    "authProviders": [],
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/admin/\",\"https://d1073yf0ptkwai.cloudfront.net/admin/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"https://d1073yf0ptkwai.cloudfront.net/\"]}"
   }
 }

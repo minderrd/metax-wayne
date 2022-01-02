@@ -51,9 +51,6 @@
     },
     "s3Key": {
       "Type": "String"
-    },
-    "baseUrl": {
-      "Type": "String"
     }
   },
   "Conditions": {
@@ -115,9 +112,6 @@
             },
             "RESOURCENAME": {
               "Ref": "resourceName"
-            },
-            "BASE_URL": {
-              "Ref": "baseUrl"
             }
           }
         },

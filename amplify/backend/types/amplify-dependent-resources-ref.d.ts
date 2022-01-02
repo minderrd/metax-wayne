@@ -3,6 +3,8 @@ export type AmplifyDependentResourcesAttributes = {
         "metaxwaynee32089ed": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
+            "HostedUIDomain": "string",
+            "OAuthMetadata": "string",
             "UserPoolId": "string",
             "UserPoolArn": "string",
             "UserPoolName": "string",
@@ -16,6 +18,18 @@ export type AmplifyDependentResourcesAttributes = {
             "Arn": "string",
             "LambdaExecutionRole": "string",
             "Region": "string"
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "Region": "string",
+            "HostingBucketName": "string",
+            "WebsiteURL": "string",
+            "S3BucketSecureURL": "string",
+            "CloudFrontDistributionID": "string",
+            "CloudFrontDomainName": "string",
+            "CloudFrontSecureURL": "string",
+            "CloudFrontOriginAccessIdentity": "string"
         }
     }
 }
