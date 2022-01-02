@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import awsConfig from '@/src/aws-exports'
+
 export default {
   name: 'AuthLoginPage',
   layout: 'auth',
@@ -45,6 +47,9 @@ export default {
   computed: {
     auth() {
       return this.$store.state.auth
+    },
+    config() {
+      return awsConfig
     },
   },
 }

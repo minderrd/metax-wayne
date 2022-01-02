@@ -2,6 +2,13 @@
   <validation-observer
     ref="observer"
   >
+    <div class="my-3">
+      <FacebookButton block />
+    </div>
+    <div class="my-3">
+      <GoogleButton block />
+    </div>
+
     <v-form @submit.prevent="login">
       <validation-provider
         v-slot="{errors}"
@@ -67,6 +74,8 @@ import {
   extend, ValidationObserver,
   ValidationProvider, setInteractionMode,
 } from 'vee-validate'
+import FacebookButton from '@/components/auth/FacebookButton.vue'
+import GoogleButton from '@/components/auth/GoogleButton.vue'
 
 setInteractionMode('eager')
 
@@ -84,6 +93,8 @@ export default {
   components: {
     ValidationObserver,
     ValidationProvider,
+    FacebookButton,
+    GoogleButton,
   },
   data() {
     return {
@@ -107,6 +118,7 @@ export default {
         })
         this.$router.push('/admin')
       } catch (e) {
+        console.log(e.name)
         this.$toast.error(e.message)
       }
       this.loading = false
