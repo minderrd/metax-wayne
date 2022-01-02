@@ -2,8 +2,8 @@
  * Auth load middleware
  * @param {*} param0
  */
-export default function({ store }) {
+export default async function({ store }) {
   if (process.client) {
-    store.dispatch('auth/load')
+    await store.dispatch('auth/load')
   }
 }
