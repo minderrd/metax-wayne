@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "9a95b786-e686-466e-b046-e447f62b8dda",
+		"name": "MetaX Wayne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get a user token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://36b7iwldh9.execute-api.us-west-2.amazonaws.com/dev/token",
+							"protocol": "https",
+							"host": [
+								"36b7iwldh9",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"token"
+							]
+						},
+						"description": "# Get a user token\nGet access token by `email` and `password`  for accessing other api calls.\n\n## Request Body\n**`email`**: *str*\nemail address of the user\n**`password`**: *str*\npassword of the user\n\n## Responses\n\n``` json\n{\n  \"token\": \"ACCESS TOKEN\"\n}\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "List users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJTeDkzRVVJWFhZMTNKYklDVk40dkF1QnpUck9ya0dqY2pGMDhOUVh5ZmRjPSIsImFsZyI6IlJTMjU2In0.eyJvcmlnaW5fanRpIjoiYjU0NmY3NmUtNWQ4Yi00ZGM2LThmYTgtMDBkYzAxMGNhZmZmIiwic3ViIjoiMzQ0NjA1MGYtZmJlYS00MmY4LTgzMDYtNmI4MTc2Yjc5OGEyIiwiZXZlbnRfaWQiOiI4YTM0NjdkOC0zYjY5LTQwMTAtYmNkNS1iNGIxMzhhY2FlNzQiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImF3cy5jb2duaXRvLnNpZ25pbi51c2VyLmFkbWluIiwiYXV0aF90aW1lIjoxNjQxMTc3MjIyLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9uWmhIMzNZYnAiLCJleHAiOjE2NDEyMDE2MjksImlhdCI6MTY0MTE5ODAyOSwianRpIjoiZTdjMDRmNjgtN2UyZC00MjNkLTk0NjYtYTE5OWE5MzRkZDA1IiwiY2xpZW50X2lkIjoiNmI2ZjYwdjlsbnFsNzZycTFnc3FmOGNkMG8iLCJ1c2VybmFtZSI6IjM0NDYwNTBmLWZiZWEtNDJmOC04MzA2LTZiODE3NmI3OThhMiJ9.FaJc4VxAUVmedQgVHlanWCNfQ7T-02f5LYZlQ0qYclm5gkhzFlZ9p29yBnH7T090fbBbjFtz7mLBxsyp2F84Q7HGPGX9_sHiNiKNJ0SqrtwUmiSGpeLzAb9qVxah9lAkup2KHA4Bdb3fhUa7WUuwRm7gX5hQNQ8-bbDahGjoeSQ58jaUhtppuSMGPWJxIqJQ0QZb4bHQsFEHEOliMxep6mE4x1CpaZwQ2xwIDwYqpwBtf_ZKNGwPNCrCC6iQLpG3Q-OjaORqMGaz1TOxI0MSBt-1VWPjzcvBIglT7Zlb6DUoyeexozhVjFS25TL-DGVLBPQo9k8j25JjQwFTjtfxmw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://36b7iwldh9.execute-api.us-west-2.amazonaws.com/dev/users",
+							"protocol": "https",
+							"host": [
+								"36b7iwldh9",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"users"
+							]
+						},
+						"description": "# List users\n\nUse this API to list your account’s users.\n\n## Request Parameters\n**`page`**: *int*\nthis number of records return within this api.\n**`size`**: *int*\nthis number of records return within this api.\n\n## Responses\n\n```\n[\n  {\n    \"name\": \"USER NAME\"\n    \"uuid\": \"USER UUID\"\n    \"email\": \"EMAIL ADDRESS\"\n  }\n]\n```"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

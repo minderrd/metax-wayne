@@ -1,8 +1,15 @@
 # metax-wayne
 
+## Public URL
+[https://d1073yf0ptkwai.cloudfront.net](https://d1073yf0ptkwai.cloudfront.net)
+
 This project is developed using AWS Amplify and Nuxt.js. Here are the documents
 [Amplify](https://docs.amplify.aws/start/q/integration/js/)
 [Nuxt.js](https://nuxtjs.org/)
+
+## For API Testing
+
+You can import `MetaX Wayne.postman_collection.json` to `Postman` for API testing.
 
 ## Before Starting
 
