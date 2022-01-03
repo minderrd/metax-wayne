@@ -30,10 +30,12 @@ export const mutations = {
 export const actions = {
   async load({ commit }) {
     try {
+      console.log('before load')
       const user = await Auth.currentAuthenticatedUser()
       commit('set', user)
       return user
     } catch (e) {
+      console.log(e)
       commit('set', null)
     }
   },
