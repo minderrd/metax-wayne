@@ -180,7 +180,7 @@ export default {
       this.loading = true
       try {
         if (!this.$refs.observer.validate()) {
-          throw new Error('Please check signup form')
+          throw new Error('Please check update password form again')
         }
         await Auth.changePassword(this.user, this.oldPassword, this.password)
         this.$toast.success('Password has been changed')
