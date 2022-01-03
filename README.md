@@ -1,7 +1,7 @@
 # metax-wayne
 
 This project is developed using AWS Amplify and Nuxt.js. Here are the documents
-[Amplify](https://docs.amplify.aws/start/q/integration/js/) 
+[Amplify](https://docs.amplify.aws/start/q/integration/js/)
 [Nuxt.js](https://nuxtjs.org/)
 
 ## Before Starting
@@ -43,7 +43,10 @@ step-by-step instructions. After update
 For publishing to production, please run the following command
 
 ``` bash
+# update config
 $ amplify push
+
+# publish to production
 $ amplify publish
 
 ```
@@ -52,5 +55,5 @@ $ amplify publish
 
 Cloud front will cache our web app into edge server. This may cause our web app not showing the lastest version but the older version.
 
-To solve the issue, please follow the this 
+To solve the issue, please follow the this
 [ducument](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html)
