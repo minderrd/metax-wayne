@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/users": {
+      "name": "/users",
+      "lambdaFunction": "usersApiFunction",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/token": {
+      "name": "/token",
+      "lambdaFunction": "tokenApiFunction",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

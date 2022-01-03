@@ -3,7 +3,7 @@
   "paths": {
     "/users": {
       "name": "/users",
-      "lambdaFunction": "usersApi",
+      "lambdaFunction": "wayneApi",
       "permissions": {
         "setting": "private",
         "auth": [

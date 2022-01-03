@@ -1,19 +1,9 @@
 {
   "auth": {
-    "metaxwaynee32089ed": {
+    "metaxwayne81bab2b9": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "metaxwaynee32089edCustomMessage",
-          "triggerProvider": "Cognito",
-          "attributes": [
-            "Arn",
-            "Name"
-          ]
-        }
-      ],
+      "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [
@@ -24,7 +14,8 @@
           "EMAIL"
         ],
         "signupAttributes": [
-          "EMAIL"
+          "EMAIL",
+          "NAME"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
@@ -46,7 +37,23 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "usersApi": {
+    "wayneApi": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": []
+    },
+    "publicApi": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "usersApiFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "tokenApiFunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -59,13 +66,35 @@
     }
   },
   "api": {
-    "apic634f8f1": {
+    "wayneApi": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "usersApi",
+          "resourceName": "wayneApi",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    },
+    "publicApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "usersApiFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "tokenApiFunction",
           "attributes": [
             "Name",
             "Arn"
