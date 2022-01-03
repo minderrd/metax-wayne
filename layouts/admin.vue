@@ -39,9 +39,7 @@
           depressed
           @click="rightDrawer = !rightDrawer"
         >
-          <v-avatar color="primary">
-            {{ user.name }}
-          </v-avatar>
+          <avatar avatar :size="30" :username="user.name" />
         </v-btn>
       </template>
     </v-app-bar>
@@ -55,6 +53,14 @@
       fixed
     >
       <v-list>
+        <v-list-item :to="'/users/profile'">
+          <v-list-item-action>
+            <v-icon light>
+              mdi-account
+            </v-icon>
+          </v-list-item-action>
+          <v-list-item-title>My Profile</v-list-item-title>
+        </v-list-item>
         <v-list-item @click="logout()">
           <v-list-item-action>
             <v-icon light>
@@ -75,8 +81,13 @@
 </template>
 
 <script>
+import Avatar from 'vue-avatar'
+
 export default {
   name: 'DefaultLayout',
+  components: {
+    Avatar,
+  },
   middleware: [
     // 'auth',
     'authOnly',
