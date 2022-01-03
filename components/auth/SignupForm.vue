@@ -17,7 +17,7 @@
       </validation-provider>
       <validation-provider
         v-slot="{errors}"
-        name="Name"
+        name="Email"
         :rules="{ required: true, email: true }"
       >
         <v-text-field
