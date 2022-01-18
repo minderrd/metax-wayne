@@ -118,6 +118,12 @@ export default {
         })
         this.$router.push('/admin')
       } catch (e) {
+        if (e.name === 'UserNotConfirmedException') {
+          this.$router.push({
+            path: '/auth/signupResend',
+            query: { email: this.email },
+          })
+        }
         console.log(e.name)
         this.$toast.error(e.message)
       }
