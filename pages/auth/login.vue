@@ -12,7 +12,7 @@
           <v-card-text>
             <AuthLoginForm />
             <v-row no-gutters class="my-4" justify="center">
-              <nuxt-link :to="`/signup`" class="text-decoration-none">
+              <nuxt-link :to="`/auth/forget`" class="text-decoration-none">
                 Forget Password
               </nuxt-link>
             </v-row>
