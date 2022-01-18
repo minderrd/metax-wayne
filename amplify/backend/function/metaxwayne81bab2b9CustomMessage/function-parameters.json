@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "metaxwayne81bab2b9",
+  "functionName": "metaxwayne81bab2b9CustomMessage",
+  "resourceName": "metaxwayne81bab2b9CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "metaxwayne81bab2b9CustomMessage",
+  "skipEdit": true,
+  "enableCors": false
+}

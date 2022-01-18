@@ -3,7 +3,7 @@ const cognitoidentityserviceprovider = new AWS.CognitoIdentityServiceProvider()
 
 exports.handler = async (event, context) => {
   const { Users } = await cognitoidentityserviceprovider.listUsers({
-    UserPoolId: 'us-west-2_nZhH33Ybp',
+    UserPoolId: 'us-west-2_frFABAbAR',
   }).promise()
 
   const users = Users.map((User) => {

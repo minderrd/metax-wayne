@@ -21,23 +21,30 @@
         },
         "wayneApi": {
           "deploymentBucketName": "amplify-metaxwayne-dev-200107-deployment",
-          "s3Key": "amplify-builds/wayneApi-454a744a74614359364a-build.zip"
+          "s3Key": "amplify-builds/wayneApi-5951757239785159392b-build.zip"
         },
         "publicApi": {
           "deploymentBucketName": "amplify-metaxwayne-dev-200107-deployment",
-          "s3Key": "amplify-builds/publicApi-4c337673697276415742-build.zip"
+          "s3Key": "amplify-builds/publicApi-386930674f3173492b66-build.zip"
         },
         "usersApiFunction": {
           "deploymentBucketName": "amplify-metaxwayne-dev-200107-deployment",
-          "s3Key": "amplify-builds/usersApiFunction-437379714743336f4232-build.zip"
+          "s3Key": "amplify-builds/usersApiFunction-6a464845584668472f41-build.zip"
         },
         "tokenApiFunction": {
           "deploymentBucketName": "amplify-metaxwayne-dev-200107-deployment",
           "s3Key": "amplify-builds/tokenApiFunction-6c6a684779796d782f50-build.zip"
+        },
+        "metaxwayne81bab2b9CustomMessage": {
+          "deploymentBucketName": "amplify-metaxwayne-dev-200107-deployment",
+          "s3Key": "amplify-builds/metaxwayne81bab2b9CustomMessage-6e4d344a48737547516a-build.zip"
         }
       },
       "auth": {
-        "metaxwayne81bab2b9": {}
+        "metaxwayne81bab2b9": {
+          "facebookAppId": "1330641017400400",
+          "googleClientId": "696287198448-mc7tam79c5hoko3n39g36s1ca5m0p480.apps.googleusercontent.com"
+        }
       }
     }
   }

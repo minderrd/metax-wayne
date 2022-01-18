@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk')
 const cognitoidentityserviceprovider = new AWS.CognitoIdentityServiceProvider()
-const UserPoolId = 'us-west-2_nZhH33Ybp'
+const UserPoolId = 'us-west-2_frFABAbAR'
 /**
  * Get a user's token
  * @param {*} event
